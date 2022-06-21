@@ -1,10 +1,15 @@
 import React from "react";
 import '../App.css';
 import { useState, useEffect } from "react";
+import { useStateValue } from "../Context/Cart/CartContext";
 
 const Jewelry = () => {
     const [jeweleries, setJeweleries] = useState([]);
     const [pending, setPending] = useState(true);
+    const { addToCart,cartItems } = useStateValue();
+  const isInCart = (jewelery) => {
+    return !!cartItems.find((item) => item.id === jewelery.id);
+  };
     const jeweleryAll =  async () => {
         const response = await fetch(`https://fakestoreapi.com/products/category/jewelery`);
         const data = await response.json();
@@ -35,7 +40,12 @@ const Jewelry = () => {
                            <p>Price: {'$' + jewelery.price}</p>
                         </div>
                         <div>
-                           <button className="cart-button">Add To Cart</button>
+                           {isInCart(jewelery) && (
+                              <button className="cart-btn">In Cart</button>
+                           )}
+                           {!isInCart(jewelery) && (
+                              <button onClick={() => {addToCart(jewelery)}} className="cart-button">Add To Cart</button>
+                           )} 
                         </div>    
                     </div>
                     ))}

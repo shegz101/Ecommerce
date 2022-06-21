@@ -1,10 +1,15 @@
 import React from "react";
 import '../App.css';
 import { useState, useEffect } from "react";
+import { useStateValue } from "../Context/Cart/CartContext";
 
 const Women = () => {
     const [women, setWomen] = useState([]);
     const [pending, setPending] = useState(true);
+    const { addToCart,cartItems } = useStateValue();
+  const isInCart = (woman) => {
+    return !!cartItems.find((item) => item.id === woman.id);
+  };
     const womenAll =  async () => {
         const response = await fetch(`https://fakestoreapi.com/products/category/women's clothing`);
         const data = await response.json();
@@ -35,7 +40,12 @@ const Women = () => {
                            <p>Price: {'$' + woman.price}</p>
                         </div>
                         <div>
-                           <button className="cart-button">Add To Cart</button>
+                           {isInCart(woman) && (
+                              <button className="cart-btn">In Cart</button>
+                           )}
+                           {!isInCart(woman) && (
+                              <button onClick={() => {addToCart(woman)}} className="cart-button">Add To Cart</button>
+                           )} 
                         </div>    
                     </div>
                     ))}

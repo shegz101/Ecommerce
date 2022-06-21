@@ -1,6 +1,6 @@
 import React from "react";
 import '../App.css';
-import ProductCard from "./ProductCard";
+import ProductCard from "../Components/ProductCard";
 import { useState, useEffect } from "react";
 
 const Home = () => {
