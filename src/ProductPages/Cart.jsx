@@ -5,7 +5,7 @@ import CartItem from './CartItem';
 import { useStateValue } from '../Context/Cart/CartContext';
 
 const Cart = () => {
-    const { cartItems, handleCheckout, itemCount, total, clearCart } = useStateValue();
+    const { cartItems, handleCheckout, checkout, itemCount, total, clearCart } = useStateValue();
     return (
         <div className="cart-section">
             <div className='cart-header'>
@@ -19,7 +19,7 @@ const Cart = () => {
                 <button className="checkout-btn" onClick={handleCheckout}>Checkout</button>
             </div>
 
-            {/* {
+            {
                 checkout && (
                     <div className='empty-cart'>
                         <h1>Thank you for patronizing us!</h1>
@@ -29,7 +29,7 @@ const Cart = () => {
                         </Link>
                     </div>  
                 )
-            } */}
+            }
 
             {
                 //If cart is empty display cart is empty, else display items added to cart

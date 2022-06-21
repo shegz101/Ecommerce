@@ -13,7 +13,7 @@
   top:0;
   z-index: 100;
   padding: 0 4.5rem 0 4.5rem;
-  height: 70px;
+  height: max-content;
   background-color: #fff;
   padding-top: 20px;
   padding-bottom: 14px;
@@ -30,8 +30,10 @@
 .nav-links {
   display: flex;
   flex-direction: row;
-  text-decoration: none;
-  text-decoration-line: none;
+}
+
+.nav-link {
+  display: none;
 }
 
 .nav-links p {
@@ -396,9 +398,25 @@
 @media only screen and (min-width:0px) and (max-width:320px) {
   .Header-section {
     padding: 1.5rem 1.5rem 0 1.5rem;
+    padding-bottom: 20px;
   }
   .nav-links {
     display: none;
+  }
+  .nav-link {
+    display: inline-block;
+  }
+  .nav-link p {
+    padding: 3px 2rem 0 2rem;
+    font-size: 18px;
+    font-weight: 900;
+    transition: transform .2s;
+    color: grey;
+    cursor: pointer;
+  }
+  .clear-nav {
+    font-size: 20px;
+    font-weight: bold;
   }
   .nav-div {
     display: flex;
@@ -473,9 +491,25 @@
 @media only screen and (min-width:321px) and (max-width:376px) {
   .Header-section {
     padding: 1.5rem 1.5rem 0 1.5rem;
+    padding-bottom: 20px;
   }
   .nav-links {
     display: none;
+  }
+  .nav-link {
+    display: inline-block;
+  }
+  .nav-link p {
+    padding: 3px 2rem 0 2rem;
+    font-size: 18px;
+    font-weight: 900;
+    transition: transform .2s;
+    color: grey;
+    cursor: pointer;
+  }
+  .clear-nav {
+    font-size: 20px;
+    font-weight: bold;
   }
   .nav-div {
     display: flex;
@@ -544,9 +578,25 @@
 @media only screen and (min-width:377px) and (max-width:426px) {
   .Header-section {
     padding: 1.5rem 1.5rem 0 1.5rem;
+    padding-bottom: 20px;
   }
   .nav-links {
     display: none;
+  }
+  .nav-link {
+    display: inline-block;
+  }
+  .nav-link p {
+    padding: 3px 2rem 0 2rem;
+    font-size: 18px;
+    font-weight: 900;
+    transition: transform .2s;
+    color: grey;
+    cursor: pointer;
+  }
+  .clear-nav {
+    font-size: 20px;
+    font-weight: bold;
   }
   .nav-div {
     display: flex;
@@ -617,9 +667,25 @@
 @media only screen and (min-width:427px) and (max-width:768px) {
   .Header-section {
     padding: 1.5rem 1.5rem 0 1.5rem;
+    padding-bottom: 20px;
   }
   .nav-links {
     display: none;
+  }
+  .nav-link {
+    display: inline-block;
+  }
+  .nav-link p {
+    padding: 3px 2rem 0 2rem;
+    font-size: 18px;
+    font-weight: 900;
+    transition: transform .2s;
+    color: grey;
+    cursor: pointer;
+  }
+  .clear-nav {
+    font-size: 20px;
+    font-weight: bold;
   }
   .nav-div {
     display: flex;
