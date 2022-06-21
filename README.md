@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# View the live version of this app [here](https://ecommerce-web-app-one.vercel.app/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
