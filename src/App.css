@@ -444,23 +444,23 @@
   .price-text {
     padding: 5px 23% 0 23%;
   }
-/*   .cart-section {
+  .cart-section {
     overflow-x: hidden;
     overflow-y: scroll;
-  } */
+  }
   .cart-button {
     padding: 5px 25% 0 25%;
   }
   .cart-btn {
     padding: 5px 25% 0 25%;
   }
-/*   .cart-product {
+  .cart-product {
     display: flex;
     flex-direction: column;
     margin-left: -7.2rem;
     height: max-content;
     width: 90vw;
-  } */
+  }
   .cart-header {
     margin: 0 1rem 0 1rem;
   }
