@@ -444,10 +444,10 @@
   .price-text {
     padding: 5px 23% 0 23%;
   }
-  .cart-section {
+/*   .cart-section {
     overflow-x: hidden;
     overflow-y: scroll;
-  }
+  } */
   .cart-button {
     padding: 5px 25% 0 25%;
   }
