@@ -49,8 +49,8 @@ const CartState = ({ children }) => {
      //Add the functions that have been defined above into the Context provider, and pass on to the children
      <CartContext.Provider
      value={{
-       showCart: state.showCart,
-       cartItems: state.cartItems,
+      //  showCart: state.showCart,
+      //  cartItems: state.cartItems,
        addToCart,
        removeFromCart,
        increase,
